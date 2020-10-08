@@ -1,4 +1,5 @@
 public class Instructor extends Person implements ITeacher{
+
     public Instructor(long id, String name) {
         super(id, name);
     }

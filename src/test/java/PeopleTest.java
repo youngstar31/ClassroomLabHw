@@ -10,7 +10,7 @@ public class PeopleTest {
     public void testAdd(){
         Person person = new Person(345,"Nate");
         List<Person> listOfPeople = new ArrayList<>();
-        People people = new People(listOfPeople);
+        People people = new People();
 
         people.add(person);
 
@@ -24,7 +24,7 @@ public class PeopleTest {
 
         List<Person> listOfPeople = new ArrayList<>();
 
-        People people = new People(listOfPeople);
+        People people = new People();
 
         people.add(person);
 
@@ -34,7 +34,7 @@ public class PeopleTest {
         people.remove(345);
 
         List<Person> expected = listOfPeople;
-        List actual = people.getPersonList();
+        List actual = people.personList;
 
         Assert.assertEquals(expected,actual);
 
@@ -47,7 +47,7 @@ public class PeopleTest {
         List<Person> listOfPeople = new ArrayList<>();
 
         listOfPeople.add(person);
-        People people = new People(listOfPeople);
+        People people = new People();
         people.findById(345);
 
 
